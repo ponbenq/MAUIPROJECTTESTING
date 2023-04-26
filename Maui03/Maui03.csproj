@@ -52,16 +52,23 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.5" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.4" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\A Spice in Life %28Shokugeki no Soma x Fem!Reader%29%3B CURRENTLY ON HIATUS.jpg" />
 	  <None Remove="Resources\Images\Memories＆Discoveries_【AuDee限定】火〜木スピンオフ『早見沙織の声に出して聴きたいJ-POP』第8回_AuDee（オーディー）.png" />
 	  <None Remove="Resources\Images\Roundup-Of-Cursed-Cat-Images-For-Those-Who-Want-To-Feel-Mildly-Strange.png" />
+	  <None Remove="Services\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\testing.png" />
 	  <BundleResource Include="Resources\Images\afukincat.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Services\" />
 	</ItemGroup>
 </Project>
