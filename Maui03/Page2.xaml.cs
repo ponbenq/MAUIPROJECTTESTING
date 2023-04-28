@@ -3,24 +3,55 @@ using Services;
 public partial class Page2 : ContentPage
 {
 	Service_init _sv;
+
+    public List<Constants> dataitem { get; set; }
+    public List<String> items { get; set; }
+    public string uname = "Item1";
+
 	public Page2()
 	{
 		InitializeComponent();
 		_sv = new Service_init();
-		
-	}
+        popUp();
+        items = new List<string>
+    {
+        "item 1",
+        "item 2",
+        "item 3"
+    };
+        
+    }
 
 	public async void popUp()
 	{
-        AddingUser();
-	}
+        var task = _sv.GetItem();
+        
+        try
+        {
+            var constantsList = await task;
 
-    async void Add_Clicked(System.Object sender, System.EventArgs e)
+            foreach (Constants constant in constantsList)
+            {
+                int id = constant.Id;
+                string userName = constant.userName;
+
+                dataitem = new List<Constants> { new Constants { Id = id, userName = userName } };
+            }
+            dataitem.ForEach(Console.WriteLine);
+        }
+        
+        catch (Exception ex)
+        {
+            Console.WriteLine($"{ex.Message}");
+        }
+    }
+
+    void Add_Clicked(System.Object sender, System.EventArgs e)
     {
         AddingUser();
     }
 
-    async void Delete_Clicked(System.Object sender, System.EventArgs e)
+    void Delete_Clicked(System.Object sender, System.EventArgs e)
     {
         DeletingUser();
     }
@@ -39,8 +70,9 @@ public partial class Page2 : ContentPage
     public async void DeletingUser()
     {
         string result = await DisplayPromptAsync("Remove Data by ID", "Enter ID",
-            initialValue: "1", maxLength: 2, keyboard: Keyboard.Numeric);
-
+             maxLength: 2, keyboard: Keyboard.Numeric);
+        if (String.IsNullOrEmpty(result))
+            return;
         int id = int.Parse(result);
         await _sv.DeleteColumn(id);
     }

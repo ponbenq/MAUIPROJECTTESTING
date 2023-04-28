@@ -3,9 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Maui03.Page2"
              Title="Page2">
-
-    
     <StackLayout Padding="20">
+        <Label x:Name="la1" Text="{Binding uname}"/>
+        <ListView x:Name="dbListView" ItemsSource="{Binding dataitem}"  BackgroundColor="LightBlue">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Id}" />
+                            <Label Text="{Binding userName}" />
+                            <Label Text="Item 1"/>
+                            <Label Text="Item 2"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <!--<ListView x:Name="listview1" ItemsSource="{Binding items}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>-->
         <Label 
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
@@ -22,8 +43,6 @@
             Clicked="Delete_Clicked"
             Margin="0,20,0,20"
             />
-            
-            
-        
     </StackLayout>
 </ContentPage>
+

@@ -37,9 +37,13 @@
 
             <Button
                 x:Name="Page2"
-                Text="go Page 2"
+                Text="Adding Page"
                 Clicked="Page2_Clicked"
                 />
+            <Button
+                x:Name="Page3"
+                Text="view data"
+                Clicked="Page3_Clicked"/>
         </VerticalStackLayout>
     </StackLayout>
 

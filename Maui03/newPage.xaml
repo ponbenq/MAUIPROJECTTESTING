@@ -17,5 +17,6 @@
                FontSize="18"
                HorizontalOptions="Center"
                VerticalOptions="Center"/>
+        <Label x:Name="label2" />
     </StackLayout>
 </ContentPage>

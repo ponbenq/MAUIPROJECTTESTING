@@ -53,7 +53,7 @@ public partial class MainPage : ContentPage
 				int id = constant.Id;
 				string userName = constant.userName;
 
-				DisplayAlert("Data Retrieve", $"id : {id}, userName: {userName}", "OK");
+				await DisplayAlert("Data Retrieve", $"id : {id}, userName: {userName}", "OK");
 			}
 		}catch(Exception ex)
 		{
@@ -64,6 +64,11 @@ public partial class MainPage : ContentPage
     async void Page2_Clicked(System.Object sender, System.EventArgs e)
     {
 		await Shell.Current.GoToAsync("PAGETWO");
+    }
+
+    async void Page3_Clicked(System.Object sender, System.EventArgs e)
+    {
+		await Shell.Current.GoToAsync("VIEWPAGE");
     }
 }
 
