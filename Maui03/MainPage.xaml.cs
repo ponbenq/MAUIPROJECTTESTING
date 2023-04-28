@@ -6,7 +6,7 @@ public partial class MainPage : ContentPage
 {
 	String name = "user1";
 
-	private int num = 1;
+	
 	Service_init db;
 	public MainPage()
 	{
@@ -30,12 +30,40 @@ public partial class MainPage : ContentPage
 			return;
 		}
 		await db.AddColumn(name);
-    }
+	}
 
 	//not really sure..
-    void retrieveData_Clicked(System.Object sender, System.EventArgs e)
+    async void retrieveData_Clicked(System.Object sender, System.EventArgs e)
     {
-		 DisplayAlert("Data Retrieve", db.GetItem().ToString(), "OK") ;
+		//DisplayAlert("Data Retrieve", db.GetItem().ToString(), "OK") ;
+		await GetData();
+		
+    }
+
+	async Task GetData()
+	{
+		var task = db.GetItem();
+
+		try
+		{
+			var constantsList = await task;
+
+			foreach(Constants constant in constantsList)
+			{
+				int id = constant.Id;
+				string userName = constant.userName;
+
+				DisplayAlert("Data Retrieve", $"id : {id}, userName: {userName}", "OK");
+			}
+		}catch(Exception ex)
+		{
+			Console.WriteLine($"{ex.Message}");
+		}
+	}
+
+    async void Page2_Clicked(System.Object sender, System.EventArgs e)
+    {
+		await Shell.Current.GoToAsync("PAGETWO");
     }
 }
 

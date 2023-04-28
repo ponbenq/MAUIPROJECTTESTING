@@ -37,7 +37,7 @@ public class Service_init : Constants
         var id = await db.InsertAsync(item);
     }
 
-    public async Task<IEnumerable<Constants>> GetItem()
+    public async Task<List<Constants>> GetItem()
     {
         //give anything!
         await Init();

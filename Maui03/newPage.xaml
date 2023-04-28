@@ -3,8 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Maui03.newPage"
              Title="newPage">
-    <Grid BackgroundColor="LightGray">
-        <Image Source="testing.png"/>
-
-    </Grid>
+    <StackLayout >
+        <!--<Image Source="testing.png"
+               HeightRequest="500"/>-->
+        <Entry x:Name="DataName" Placeholder="Enter name"/>
+        <Label Text="{Binding Source={x:Reference DataName},Path=Text}"/>
+        <Slider x:Name="slider"
+                Maximum="360"
+                VerticalOptions="Center" />
+        <Label BindingContext="{x:Reference slider}"
+               Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
+               FontAttributes="Bold"
+               FontSize="18"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+    </StackLayout>
 </ContentPage>

@@ -7,6 +7,7 @@ public partial class AppShell : Shell
 		InitializeComponent();
 
 		Routing.RegisterRoute("NEWPAGE", typeof(newPage));
+		Routing.RegisterRoute("PAGETWO", typeof(Page2));
 	}
 }
 

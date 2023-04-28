@@ -1,7 +1,7 @@
 ﻿namespace Maui03;
 using SQLite;
 
-public class Constants : ContentPage
+public class Constants
 {
 	[PrimaryKey, AutoIncrement]
 	public int Id { get; set; }

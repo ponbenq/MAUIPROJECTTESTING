@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Maui03.MainPage">
 
-    <Grid>
+    <StackLayout Padding="10">
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
@@ -12,7 +12,7 @@
             <Image
                 Source="afukincat.png"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="500"
+                HeightRequest="200"
                 HorizontalOptions="Center"
                 Aspect="AspectFill"/>
             
@@ -34,8 +34,14 @@
                 Text="See"
                 Clicked="retrieveData_Clicked"
                 HorizontalOptions="Center"/>
+
+            <Button
+                x:Name="Page2"
+                Text="go Page 2"
+                Clicked="Page2_Clicked"
+                />
         </VerticalStackLayout>
-    </Grid>
+    </StackLayout>
 
 </ContentPage>
 
