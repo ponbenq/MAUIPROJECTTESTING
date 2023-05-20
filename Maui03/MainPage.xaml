@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Maui03.MainPage">
+             x:Class="Maui03.MainPage"
+             >
 
     <StackLayout Padding="10">
         <VerticalStackLayout
@@ -44,6 +45,10 @@
                 x:Name="Page3"
                 Text="view data"
                 Clicked="Page3_Clicked"/>
+            <Button
+                x:Name="ProductPage"
+                Text="All Product"
+                Clicked="ProductPage_Clicked"/>
         </VerticalStackLayout>
     </StackLayout>
 

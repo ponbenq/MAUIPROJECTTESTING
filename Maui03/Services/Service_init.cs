@@ -1,14 +1,20 @@
 ﻿namespace Maui03.Services;
 using SQLite;
+using System.IO;
+using System.Reflection;
 
 public class Service_init : Constants
 {
 	static SQLiteAsyncConnection db;
 
-	
+    static string servicePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+    static string dbFilesPath = Path.Combine(servicePath, ".." , "DB_files");
+    string dbFilePath = Path.Combine(dbFilesPath, "test_mydatabase.db");
+
 
 	public Service_init()
 	{
+        Console.WriteLine("This is file path and NAME! : "+dbFilePath);
         Init();	 
 	}
 
@@ -17,6 +23,7 @@ public class Service_init : Constants
         if (db != null)
             return;
 
+        //var path = Path.Combine(FileSystem.AppDataDirectory, "MyData.db");
         var path = Path.Combine(FileSystem.AppDataDirectory, "MyData.db");
 
         db = new SQLiteAsyncConnection(path);

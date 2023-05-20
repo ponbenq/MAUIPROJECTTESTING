@@ -34,6 +34,9 @@
 	  <CreatePackage>false</CreatePackage>
 	</PropertyGroup>
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\pngegg.png" />
+	</ItemGroup>
+	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
@@ -57,6 +60,10 @@
 		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
 		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.4" />
 		<PackageReference Include="sqlite-net" Version="1.6.292" />
+		<PackageReference Include="Syncfusion.Maui.ListView" Version="21.2.4" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="7.0.5" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -64,12 +71,60 @@
 	  <None Remove="Resources\Images\Memories＆Discoveries_【AuDee限定】火〜木スピンオフ『早見沙織の声に出して聴きたいJ-POP』第8回_AuDee（オーディー）.png" />
 	  <None Remove="Resources\Images\Roundup-Of-Cursed-Cat-Images-For-Those-Who-Want-To-Feel-Mildly-Strange.png" />
 	  <None Remove="Services\" />
+	  <None Remove="DB_files\" />
+	  <None Remove="Models\" />
+	  <None Remove="ViewModels\" />
+	  <None Remove="Views\" />
+	  <None Remove="Resources\Images\pngegg.png" />
+	  <None Remove="Resources\Images\felix-bacher-sRVkSg51hzA-unsplash.png" />
+	  <None Remove="Resources\Images\rahel-klas-CA9iI3p0NG4-unsplash.png" />
+	  <None Remove="Resources\Images\valdemaras-d-YKJr94JpKtc-unsplash.png" />
+	  <None Remove="Resources\Images\david-becker-0J_dP7tm0Iw-unsplash.png" />
+	  <None Remove="Resources\Images\whosaynow-jY2--PMYAx4-unsplash.png" />
+	  <None Remove="Resources\Images\valdemaras-d-YKJr94JpKtc-unsplash%281%29.png" />
+	  <None Remove="Resources\Images\anita-austvika-u9ZFCP8VuvU-unsplash.png" />
+	  <None Remove="Resources\Images\lukas-souza-YwNy2dbozho-unsplash.png" />
+	  <None Remove="Resources\Images\national-library-of-scotland-GxVP2aF1hio-unsplash.png" />
+	  <None Remove="Resources\Raw\products.json" />
+	  <None Remove="Resources\products.json" />
+	  <None Remove="Resources\Images\empty.png" />
+	  <None Remove="Resources\Raw\pl.json" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\testing.png" />
 	  <BundleResource Include="Resources\Images\afukincat.png" />
+	  <BundleResource Include="Resources\Images\pngegg.png" />
+	  <BundleResource Include="Resources\Images\pngegg.png" />
+	  <BundleResource Include="Resources\Images\p1.png" />
+	  <BundleResource Include="Resources\Images\p3.png" />
+	  <BundleResource Include="Resources\Images\p2.png" />
+	  <BundleResource Include="Resources\Images\p4.png" />
+	  <BundleResource Include="Resources\Images\p5.png" />
+	  <BundleResource Include="Resources\Images\p6.png" />
+	  <BundleResource Include="Resources\Raw\products.json" />
+	  <BundleResource Include="Resources\products.json" />
+	  <BundleResource Include="Resources\Images\empty.png" />
+	  <BundleResource Include="Resources\Raw\pl.json" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Services\" />
+	  <Folder Include="DB_files\" />
+	  <Folder Include="Models\" />
+	  <Folder Include="ViewModels\" />
+	  <Folder Include="Views\" />
 	</ItemGroup>
+	<ItemGroup>
+    <!-- You may not need this first line -->
+    <Compile Include="**\*.cs" Exclude="obj\**" />
+    <Compile Update="**\*.xaml.cs">
+        <DependentUpon>%(Filename)</DependentUpon>      
+        <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <PropertyGroup>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+</PropertyGroup>
+<PropertyGroup>
+  <EnableDefaultPageItems>false</EnableDefaultPageItems>
+</PropertyGroup>
 </Project>

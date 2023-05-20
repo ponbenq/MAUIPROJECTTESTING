@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "itemName": "Item 1",
+    "itemPic": "item1.jpg",
+    "itemQuantity": "2 units"
+  },
+  {
+    "id": 2,
+    "itemName": "Item 2",
+    "itemPic": "item2.jpg",
+    "itemQuantity": "4 units"
+  },
+  {
+    "id": 3,
+    "itemName": "Item 3",
+    "itemPic": "item3.jpg",
+    "itemQuantity": "6 units"
+  },
+  {
+    "id": 4,
+    "itemName": "Item 4",
+    "itemPic": "item4.jpg",
+    "itemQuantity": "8 units"
+  },
+  {
+    "id": 5,
+    "itemName": "Item 5",
+    "itemPic": "item5.jpg",
+    "itemQuantity": "10 units"
+  },
+  {
+    "id": 6,
+    "itemName": "Item 6",
+    "itemPic": "item6.jpg",
+    "itemQuantity": "12 units"
+  },
+  {
+    "id": 7,
+    "itemName": "Item 7",
+    "itemPic": "item7.jpg",
+    "itemQuantity": "14 units"
+  },
+  {
+    "id": 8,
+    "itemName": "Item 8",
+    "itemPic": "item8.jpg",
+    "itemQuantity": "16 units"
+  },
+  {
+    "id": 9,
+    "itemName": "Item 9",
+    "itemPic": "item9.jpg",
+    "itemQuantity": "18 units"
+  },
+  {
+    "id": 10,
+    "itemName": "Item 10",
+    "itemPic": "item10.jpg",
+    "itemQuantity": "20 units"
+  },
+  {
+    "id": 11,
+    "itemName": "Item 11",
+    "itemPic": "item11.jpg",
+    "itemQuantity": "22 units"
+  },
+  {
+    "id": 12,
+    "itemName": "Item 12",
+    "itemPic": "item12.jpg",
+    "itemQuantity": "24 units"
+  },
+  {
+    "id": 13,
+    "itemName": "Item 13",
+    "itemPic": "item13.jpg",
+    "itemQuantity": "26 units"
+  },
+  {
+    "id": 14,
+    "itemName": "Item 14",
+    "itemPic": "item14.jpg",
+    "itemQuantity": "28 units"
+  },
+  {
+    "id": 15,
+    "itemName": "Item 15",
+    "itemPic": "item15.jpg",
+    "itemQuantity": "30 units"
+  },
+  {
+    "id": 16,
+    "itemName": "Item 16",
+    "itemPic": "item16.jpg",
+    "itemQuantity": "32 units"
+  },
+  {
+    "id": 17,
+    "itemName": "Item 17",
+    "itemPic": "item17.jpg",
+    "itemQuantity": "34 units"
+  },
+  {
+    "id": 18,
+    "itemName": "Item 18",
+    "itemPic": "item18.jpg",
+    "itemQuantity": "36 units"
+  },
+  {
+    "id": 19,
+    "itemName": "Item 19",
+    "itemPic": "item19.jpg",
+    "itemQuantity": "38 units"
+  },
+  {
+    "id": 20,
+    "itemName": "Item 20",
+    "itemPic": "item20.jpg",
+    "itemQuantity": "40 units"
+  }
+]
+
